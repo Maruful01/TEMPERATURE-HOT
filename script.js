@@ -20,5 +20,5 @@ document.getElementById ("search-btn").addEventListener ('click', function (){
         document.getElementById ("description").innerText = weatherDescription;
     })
     }  
-    currentWeather ()
+    currentWeather ();
   })
