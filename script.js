@@ -1,7 +1,7 @@
 document.getElementById ("search-btn").addEventListener ('click', function (){
     function currentWeather (){
         const inputValue = document.getElementById("input").value;
-       fetch('http://api.openweathermap.org/data/2.5/weather?q='+inputValue+'&appid=92b48f87de75a1292b04b39d00d924e3')
+       fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue+'&appid=92b48f87de75a1292b04b39d00d924e3')
        .then(response => response.json())
        .catch(err => alert ("Wrong city name."))
        .then(data => {    
