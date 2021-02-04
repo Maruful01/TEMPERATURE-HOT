@@ -3,6 +3,7 @@ document.getElementById ("search-btn").addEventListener ('click', function (){
         const inputValue = document.getElementById("input").value;
        fetch('http://api.openweathermap.org/data/2.5/weather?q='+inputValue+'&appid=92b48f87de75a1292b04b39d00d924e3')
        .then(response => response.json())
+       .catch(err => alert ("Wrong city name."))
        .then(data => {    
         const weather = data.main;
         const CityName = data.name;
@@ -18,7 +19,6 @@ document.getElementById ("search-btn").addEventListener ('click', function (){
         document.getElementById ("city-name").innerText = CityName;
         document.getElementById ("description").innerText = weatherDescription;
     })
-   .catch(err => alert ("Wrong city name."))
-    }
+    }  
     currentWeather ()
   })
